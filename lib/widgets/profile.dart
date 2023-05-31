@@ -16,6 +16,7 @@ class _ProfileState extends State<Profile> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          
           Container(
             decoration: const BoxDecoration(
                 color: Colors.white,

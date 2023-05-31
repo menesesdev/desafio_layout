@@ -15,7 +15,7 @@ class Perfil extends StatefulWidget {
 }
 
 class _PerfilState extends State<Perfil> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 0; //controla o índice do item selecionado.
 
   void _onItemTapped(int index) {
     setState(() {
@@ -134,22 +134,26 @@ class _PerfilState extends State<Perfil> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: Color.fromARGB(255, 60, 57, 137),
             ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shop_2, color: Color.fromARGB(255, 60, 57, 137)),
-            label: "Search",
+            icon: Icon(
+              Icons.shop_2,
+            ),
+            label: "pedidos",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.people, color: Color.fromARGB(255, 60, 57, 137)),
-            label: "Settings",
+            icon: Icon(
+              Icons.people,
+            ),
+            label: "clientes",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.trending_up_rounded,
-                color: Color.fromARGB(255, 60, 57, 137)),
-            label: "Settings",
+            icon: Icon(
+              Icons.trending_up_rounded,
+            ),
+            label: "estatísticas",
           ),
         ],
         selectedItemColor: const Color.fromARGB(255, 60, 57, 137),

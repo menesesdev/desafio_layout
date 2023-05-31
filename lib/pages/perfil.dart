@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/banner_cima.dart';
 import '../widgets/banner_template.dart';
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/linha.dart';
 import '../widgets/profile.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
@@ -15,14 +16,6 @@ class Perfil extends StatefulWidget {
 }
 
 class _PerfilState extends State<Perfil> {
-  int _selectedIndex = 0; //controla o índice do item selecionado.
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,38 +120,7 @@ class _PerfilState extends State<Perfil> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.shop_2,
-            ),
-            label: "pedidos",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.people,
-            ),
-            label: "clientes",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.trending_up_rounded,
-            ),
-            label: "estatísticas",
-          ),
-        ],
-        selectedItemColor: const Color.fromARGB(255, 60, 57, 137),
-        unselectedItemColor: Colors.purple,
-      ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
